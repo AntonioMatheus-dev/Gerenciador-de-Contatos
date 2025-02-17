@@ -1,19 +1,18 @@
 const fs=require('fs')
 
-function CarregarContatos(){
+function recebercontatos(){
     const data=fs.readFileSync('teste.json')
     const contatos=JSON.parse(data)
-    return contatos
+    return contatos;
 }
-
-function ExbirContatos(contatos){
-contatos.forEach((contato,index) => {
-    console.log(`Contato: ${index+1}`);
-    console.log(`nome: ${contato.nome}`);
-    console.log(`telefone: ${contato.telefone}`)
-    console.log(`email: ${contato.email}`)
-    console.log('-----------------------')
-});
+function exibircontatos(contatos){
+    contatos.forEach((contato,index )=> {
+        console.log(`Contato: ${index +1}`)
+        console.log(`Nome: ${contato.nome}`)
+        console.log(`Telefone:${contato.telefone}` )
+        console.log(`e-mail: ${contato.email}`)
+        console.log('------------------------------------')
+    });
 }
-const contatos=CarregarContatos()
-    ExbirContatos(contatos)
+const contatos=recebercontatos()
+exibircontatos(contatos)
