@@ -14,6 +14,20 @@ console.log(`descrição: ${tarefa.descricao}`)
 console.log(`status: ${tarefa.status}`)
 console.log(`_______________________________________`)
 })}
-
+function adicionartrefas(tarefas,novatarefa){
+novatarefa.id=tarefas.length +1
+tarefas.push(novatarefa);
+fs.writeFileSync('tarefa.json', JSON.stringify(tarefas,null,2));
+console.log('Tarefa adcionada com sucesso!')
+}
 const tarefas=carregartarefas();
+exibirtarefas(tarefas);
+
+const novatarefa={
+    titulo:"fazer exercicio em JavaScript",
+    descricao:"Completar exercicio json",
+    status:"Pedente"
+}
+adicionartrefas(tarefas, novatarefa)
+
 exibirtarefas(tarefas);

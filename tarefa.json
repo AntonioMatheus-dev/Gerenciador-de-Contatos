@@ -10,5 +10,11 @@
     "titulo": "Ler livro",
     "descricao": "Ler capítulo 4 do livro ",
     "status": "Pedente"
+  },
+  {
+    "titulo": "fazer exercicio em JavaScript",
+    "descricao": "Completar exercicio json",
+    "status": "Pedente",
+    "id": 3
   }
 ]
